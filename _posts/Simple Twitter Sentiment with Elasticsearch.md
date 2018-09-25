@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "Simple Twitter Sentiment with Elasticsearch"
+author: "Dayton"
+---
 
 
 ```python
