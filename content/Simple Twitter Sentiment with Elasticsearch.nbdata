@@ -1,0 +1,8 @@
+Title: Simple Twitter Sentiment with Elasticsearch
+Slug: simple-twitter-sentiment-with-elasticsearch
+Date: 2018-09-26 21:30
+Category: posts
+Tags: tweepy elasticsearch
+Author: Dayton Dang
+Summary: A simple sentimental analysis of tweets streaming from Twitter using tweepy, and store in Elasticsearch
+
