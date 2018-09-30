@@ -1139,4 +1139,4 @@ h6:hover .anchor-link {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="tweepy elasticsearch"></category></entry></feed>
+</content><category term="tweepy"></category><category term="elasticsearch"></category></entry></feed>
