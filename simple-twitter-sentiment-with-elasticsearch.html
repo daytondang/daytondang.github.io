@@ -1,82 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-          <title>dayton</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
-        <link href="http://daytondang.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="dayton Full Atom Feed" />
-        <link href="http://daytondang.github.io/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="dayton Categories Atom Feed" />
-        <!-- twitter card metadata -->
-<meta name="twitter:site" content="">
-<meta name="twitter:title" content="Simple Twitter Sentiment with Elasticsearch">
-<meta name="twitter:description" content="">
-        <!-- OG Tags -->
-<meta property="og:url" content="http://daytondang.github.io/simple-twitter-sentiment-with-elasticsearch.html"/>
-<meta property="og:title" content="dayton | Simple Twitter Sentiment with Elasticsearch" />
-<meta property="og:description" content="" />
-        <!-- favicon -->
-        <!-- moment.js for date formatting -->
-        <script src="http://daytondang.github.io/theme/js/moment.js"></script>
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="http://daytondang.github.io/theme/css/main.css" />
-		<script>
-			
-                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
-    
-    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
-                
-                grunticon(["http://daytondang.github.io/theme/css/icons.data.svg.css", "http://daytondang.github.io/theme/css/icons.data.png.css", "http://daytondang.github.io/theme/css/icons.fallback.css"]);
-            </script>
-        <noscript><link href="http://daytondang.github.io/theme/css/icons.fallback.css" rel="stylesheet"></noscript>
-        <!-- menu toggle javascript -->
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", initMenu);
-            
-            function initMenu(){
-                var menu = document.getElementById("menu");
-                var menulink = document.getElementById("menu-link");
-                menulink.addEventListener("click", function toggleMenu(){
-                        window.event.preventDefault();
-                        menulink.classList.toggle('active');
-                        menu.classList.toggle('active');              
-                    });
-            };
-        </script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <title>Simple Twitter Sentiment with Elasticsearch &ndash; dayton</title>
 
-    <meta name="tags" content="tweepy elasticsearch" />
+    <!-- Meta -->
+    <meta name="description" content="dayton &ndash; ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</head>
-<body>
-    <div role="banner" id="masthead">
-        <header>
-            <h1><a href="/">'s Blog</a></h1>
-            <a href="#menu" id="menu-link">more stuff</a>
-            <nav id="menu">
-                <ul>
-                            <li class="active"><a href="http://daytondang.github.io/category/posts.html">posts</a></li>
-                </ul>
-            </nav>
-        </header>
+    <!-- Social -->
+    <meta property="article:author" content="Dayton Dang" />
+    <meta property="article:section" content="posts" />
+    <meta property="article:published_time" content="2018-09-26" />
+
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Simple Twitter Sentiment with Elasticsearch"/>
+    <meta property="og:description" content="A simple sentimental analysis of tweets streaming from Twitter using tweepy, and store in Elasticsearch"/>
+    <meta property="og:site_name" content="dayton" />
+    <meta property="og:url" content="http://daytondang.github.io/simple-twitter-sentiment-with-elasticsearch.html"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Simple Twitter Sentiment with Elasticsearch">
+    <meta name="twitter:description" content="A simple sentimental analysis of tweets streaming from Twitter using tweepy, and store in Elasticsearch">
+    <meta name="twitter:url" content="http://daytondang.github.io/simple-twitter-sentiment-with-elasticsearch.html">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://daytondang.github.io/feeds/all.atom.xml" title="dayton Atom Feed" />
+    <link rel="alternate" type="application/atom+xml" href="http://daytondang.github.io/feeds/posts.atom.xml" title="dayton Categories Atom Feed" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+    <link rel="stylesheet" type="text/css" href="http://daytondang.github.io/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="http://daytondang.github.io/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://daytondang.github.io/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="http://daytondang.github.io/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://daytondang.github.io/theme/css/pygments-highlight-github.css">
+
+    <!-- Icon -->
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://daytondang.github.io/theme/js/jqcloud.min.js"></script>
+  </head>
+
+  <body>
+    <div class="w3-row w3-card w3-white">
+      <header id="header">
+        <a href="http://daytondang.github.io" id="header-logo" title="Home">DD</a>
+        <nav id="header-menu">
+          <ul>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green" style="font-weight: bold;"><a href="http://daytondang.github.io/category/posts.html">posts</a></li>
+          </ul>
+        </nav>
+      </header>
     </div>
-        <div class="page" role="main">
-  <div class="article" role="article">
+
+
+
+    <br><br><br>
+
     <article>
-        <footer>
-            <a name="top"></a>
-            <p>
-              <time datetime=" 2018-09-26 21:30:00-07:00">
-                <script>document.write(moment('2018-09-26 21:30:00-07:00').format('LL'));</script>
-              </time>
-            </p>
-        </footer>
-        <header>
-          <h2>
-            Simple Twitter Sentiment with Elasticsearch
-          </h2>
-        </header>
-      <div class="content">
-         <style type="text/css">/*!
+      <header class="w3-container col-main">
+        <h1>Simple Twitter Sentiment with Elasticsearch</h1>
+        <div class="post-info">
+          <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+            <span><time datetime="2018-09-26T21:30:00-07:00">Wed 26 September 2018</time> in <a href="http://daytondang.github.io/category/posts.html" title="All articles in category posts">posts</a></span>
+          </div>
+          <div>
+            <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
+              <a href="http://daytondang.github.io/tag/tweepy-elasticsearch.html" title="All articles with Tweepy Elasticsearch tag">#tweepy elasticsearch</a>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <br>
+
+
+      <div class="col-main w3-container">
+        <section id="content">
+          <style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -1217,18 +1222,57 @@ h6:hover .anchor-link {
 }
 </script>
 
-      </div>
-      <div class="back-to-top">
-          <a href="#top">back to top</a>
+        </section>
+
+        <br><br><br>
+
+        <footer>
+          <div class="adjust-width">
+            <div id="author-block" class="w3-light-grey w3-border">
+              <div id="author-info">
+                <a href=""><img style="width: 60px; height: 60px;" src="" onerror="this.src='theme/images/avatar.png'" alt="Avatar"></a>
+                <div style="margin-left: 20px; margin-top: 15px;">
+                  <a href=""><span id="author-name" class="w3-hover-text-dark-grey">Dayton Dang</span></a>
+                  <p id="author-story"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br><br>
+
+          <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it with your friends!</p>
+          <div id="share" class="share">
+            <a href="http://www.facebook.com/sharer.php?u=http%3A//daytondang.github.io/simple-twitter-sentiment-with-elasticsearch.html&amp;t=dayton%3A%20Simple%20Twitter%20Sentiment%20with%20Elasticsearch" target="_blank" class="w3-btn w3-indigo">
+              <i class="fa fa-facebook"></i> <span>Facebook</span>
+            </a>
+            <a href="http://twitter.com/share?url=http%3A//daytondang.github.io/simple-twitter-sentiment-with-elasticsearch.html&amp;text=dayton%3A%20Simple%20Twitter%20Sentiment%20with%20Elasticsearch" target="_blank" class="w3-btn w3-blue">
+              <i class="fa fa-twitter"></i> <span>Twitter</span>
+            </a>
+            <a href="https://plus.google.com/share?url=http%3A//daytondang.github.io/simple-twitter-sentiment-with-elasticsearch.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
+              <i class="fa fa-google-plus"></i> <span>Google</span>
+            </a>
+          </div>
+
+          <br><br><br>
+
+
+
+        </footer>
       </div>
     </article>
-  </div>
-<!-- end article -->
-                <footer>
-                    <div class="icons">
-                    </div>
-                    <p>© <script>document.write(moment().format('YYYY'));</script> Dayton Dang</p>
-                </footer>
-        </div>
-</body>
+
+
+    <footer id="footer">
+      <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
+        <span>
+          &copy;
+          Dayton Dang
+ | <a href="http://daytondang.github.io/feeds/all.atom.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a>        </span>
+      </div>
+    </footer>
+
+
+
+  </body>
 </html>
