@@ -3,8 +3,9 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Dayton Dang'
-SITENAME = "Dayton's Note"
+SITENAME = 'dayton'
 SITEURL = ''
+THEME = './themes/MinimalXY'
 
 PATH = 'content'
 
@@ -26,8 +27,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('github', 'https://github.com/daytondang'),
+          ('linkedin', 'https://www.linkedin.com/in/daytondang/'),)
 
 DEFAULT_PAGINATION = 10
 
